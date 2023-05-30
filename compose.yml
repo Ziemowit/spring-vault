@@ -1,0 +1,13 @@
+version: '3.1'
+
+services:
+
+  vault:
+    image: hashicorp/vault
+    restart: always
+    ports:
+      - "8200:8200"
+    environment:
+      VAULT_DEV_ROOT_TOKEN_ID: 1234
+    cap_add:
+      - IPC_LOCK
